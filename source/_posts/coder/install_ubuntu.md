@@ -6,7 +6,7 @@ categories:
   - 系统
 ---
 
-Ubuntu系统下的安装
+针对本人Ubuntu系统下的安装
 <!-- More -->
 
 # docker环境安装

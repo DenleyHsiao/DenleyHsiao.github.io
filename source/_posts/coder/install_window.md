@@ -1,13 +1,17 @@
 ---
 layout: post
-title:  windows下的环境安装
+title:  windows系统安装
 date:   2022-04-29 16:49:08
 categories:
   - 系统
 ---
 
-本文针对个人MAC下的虚拟机win7_64旗舰版
+针对本人MAC下的虚拟机win7_64旗舰版
+<!-- More -->
 
+* OS下载：[个人](https://msdn.itellyou.cn/)或者[微软下载中心](https://www.microsoft.com/zh-cn/software-download)
+* 使用[老毛桃](https://www.laomaotao.net/)制作windows启动盘
+* [驱动精灵万能网卡版](http://www.drivergenius.com/)
 * 运行win7激活工具
 * 安装[VIM](https://www.vim.org/download.php#pc)，并配置好;
 * 安装mtux，并配置好；
@@ -29,9 +33,20 @@ categories:
 
 * 安装烧录工具(stc-isp-15xx-v6.86S)
 
+# V2
+SD卡备份与恢复：Win32DiskImager
+* 恢复: 选择指定image文件后Write
+* 备份: 选择指定image文件后Read，但只能手动输入保存文件路径，如：C:\RaspberryPi.img
+
 # 附录
 * windows下的包管理工具：[scoop](https://sspai.com/post/52496)、[baulk](https://github.com/baulk/baulk)
 * everything
 * autohotkey
 * Total Commander
 * sscom支持串口/网口通信，注意串口通信时可选设置RTS/DTR
+* win10截图：snippingtool
+* 串口通信：serial_port_utility/SerialDebug
+* SD卡格式化：SDFormatter
+
+# 注意
+* 微软下载中心的”Oct 2018"版本有问题，应选”April 2018“
