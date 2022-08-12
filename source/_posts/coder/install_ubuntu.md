@@ -55,7 +55,7 @@ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 1. 任意用户登陆进入命令行;
 2. 执行`sudo passwd`即可重置密码
 
-#修改源并升级更新
+# 修改源并升级更新
 1. 备份源: `sudo cp /etc/apt/sources.list /etc/apt/sources.list_backup`
 2. 修改源: `sudo gedit /etc/apt/sources.list`,可参考[Ubuntu 10.04 (Lucid) 更新源](http://www.cnblogs.com/dolphin0520/archive/2013/03/15/2960907.html)/[Ubuntu各版本下的更新源](http://pan.baidu.com/share/link?shareid=1362990598&uk=4278685087)
 3. 保存编辑好的文件，执行以下命令更新: `sudo apt-get update`
@@ -110,6 +110,7 @@ dmesg | grep ttyS*
 3. 用户名/密码设置为: argusai/1..8，选择免密登陆
 
 ## 软件
+* 为加快速度可选择设置更新源：aliyun或tsing
 1. 设置更新源：进入Software&Updates设为mirrors.aliyun.com
 ```bash
 sudo apt-get update -y
@@ -117,7 +118,6 @@ sudo apt-get install cutecom watchdog git -y
 sudo cutecom
 ```
 2. 安装Teamviewer: 使用U盘中的指定版本，安装完后设置密码1..8,并设置成“随系统一同启动"te保存好ID
-3. 安装ros,出现问题请见参考下的6/7/8链接
 
 # 看门狗
 ## 步骤
@@ -144,6 +144,3 @@ sudo systemctl status watchdog.service
 3. [一个软件实现的Linux看门狗—soft_wdt](https://docs.khadas.com/zh-cn/vim3/HowToSetupWatchdog.html)
 4. [Linux 软件看门狗 watchdog 喂狗](https://blog.csdn.net/u013932687/article/details/73274178)
 5. [Ubuntu下看门狗程序](https://blog.csdn.net/qq_35571554/article/details/82763977)
-6. [GPG error](https://blog.csdn.net/zhuiqiuzhuoyue583/article/details/90597499)
-7. [Error in `appstreamcli'](https://blog.csdn.net/AAA123524457/article/details/96484576)
-8. [cannot download default sources list from](https://blog.csdn.net/u013468614/article/details/102917569)
