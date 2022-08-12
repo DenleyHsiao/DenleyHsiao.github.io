@@ -9,7 +9,8 @@ categories:
 串口工具汇总
 <!-- More -->
 
-要打开的串口在打开之前需先加上权限，如： `sudo chmod 777 /dev/ttyS1`
+* 要打开的串口在打开之前需先加上权限，如： `sudo chmod 777 /dev/ttyS1`
+* MAC下的：[coolterm](https://blog.csdn.net/bht890811/article/details/74151180): 串口调试助手/[minicom](https://blog.csdn.net/u010285246/article/details/72354038): 串口调试工具
 
 # cutecom
 * [ubuntu 安装cutecom串口调试工具](https://blog.csdn.net/shui1025701856/article/details/79277484)
