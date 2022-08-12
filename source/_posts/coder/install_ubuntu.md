@@ -60,14 +60,6 @@ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 2. 修改源: `sudo gedit /etc/apt/sources.list`,可参考[Ubuntu 10.04 (Lucid) 更新源](http://www.cnblogs.com/dolphin0520/archive/2013/03/15/2960907.html)/[Ubuntu各版本下的更新源](http://pan.baidu.com/share/link?shareid=1362990598&uk=4278685087)
 3. 保存编辑好的文件，执行以下命令更新: `sudo apt-get update`
 
-* [让树莓派永不失联](https://blog.csdn.net/kxwinxp/article/details/78370980):Screen
-* 串口工具
-    ```bash
-    # 安装
-    sudo apt-get install cutecom
-    # 运行
-    cutecom
-    ```
 # 命令
 * [shyaml](https://linuxtoy.org/archives/shyaml.html):shell下的yaml解析器
 * [jq](https://linuxtoy.org/archives/jq.html): shell下的json解析器
@@ -83,17 +75,6 @@ function pause(){
     echo -ne '\b \n'
   fi
 }
-```
-* 串口命令
-```bash
-# 查看串口是否可用，可以对串口发送数据比如对com1口
-echo lyjie126 > /dev/ttyS0
-# 查看串口名称使用, 一般串口的名称全部在dev下面，如果你没有外插串口卡的话默认是dev下的ttyS* ,一般ttyS0对应com1，ttyS1对应com2，当然也不一定
-ls -l /dev/ttyS*
-# 查看串口驱动
-cat /proc/tty/drivers/serial
-# 查看串口设备
-dmesg | grep ttyS*
 ```
 
 # 免密登陆

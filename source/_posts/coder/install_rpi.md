@@ -18,36 +18,10 @@ categories:
 ```bash
 rosdep install --from-paths src --ignore-src --rosdistro=kinetic -y
 ```
-
 * rosdep命令--from-paths可以是源代码的src目录，也可以是安装包的share目录：其中都有package.xml文件
 * source /opt/ros/argusai/setup.bash后还是找不到工作空间，刷新一下环境：rospack profile
-* launch文件[使用robot_upstart自启动](http://www.bubuko.com/infodetail-2614884.html)：目前问题是执行sudo systemctl daemon-reload && sudo systemctl start mine_job时：
-Failed to connect to bus: No such file or directory
-
+* launch文件[使用robot_upstart自启动](http://www.bubuko.com/infodetail-2614884.html)：目前问题是执行sudo systemctl daemon-reload && sudo systemctl start mine_job时：Failed to connect to bus: No such file or directory
 * 出现问题请见参考下的1/2/3链接
-
-# 串口工具
-要打开的串口在打开之前需先加上权限，如： `sudo chmod 777 /dev/ttyS1`
-* [ubuntu 安装cutecom串口调试工具](https://blog.csdn.net/shui1025701856/article/details/79277484)
-```bash
-# 安装
-apt-get install cutecom
-
-# 运行
-cutecom
-```
-
-* [树莓派上使用串口调试工具xgcom](https://shumeipai.nxez.com/2017/04/29/raspberry-pi-using-the-serial-debugging-tool-xgcom.html)
-```bash
-# 安装编译环境
-sudo apt-get install autoconf automake libvte-dev libglib2.0-dev pkg-config libgtk2.0-dev -y
-
-# 编译安装
-./autogen.sh && make && sudo make install
-
-# 运行
-sudo xgcom
-```
 
 # 远程工具
 Teamviewer
@@ -164,7 +138,6 @@ sudo apt-get install google-chrome-stable -y
 ```bash
 gnome-terminal -x /home/argusai/argusai/share/argusai/scripts/startup.sh
 ```
-
 * 分屏终端工具: terminator
 * [ubuntu系统汉化](https://blog.csdn.net/qq_19339041/article/details/80058575)
 * 安装shell: [zsh/oh-my-zsh](https://www.cnblogs.com/EasonJim/p/7863099.html)
@@ -196,3 +169,4 @@ sudo rm /var/lib/dpkg/lock
 12.[ROS主从机设置](https://www.jianshu.com/p/5ff453cb994e)
 13,[免密登陆](https://www.cnblogs.com/konrad/p/6901273.html)
 14.[各主板定时开机设置](https://wenku.baidu.com/view/66c6604bc850ad02de80416d.html)
+15.[让树莓派永不失联](https://blog.csdn.net/kxwinxp/article/details/78370980): Screen
