@@ -4,16 +4,16 @@
   <meta charset="utf-8">
   
   
-  <title>ROS入门总结 | 晓月刀的个人空间</title>
+  <title>加密狗总结 | 晓月刀的个人空间</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="自从9月20号开始进入机器人领域，一路的摸爬滚打，一路的酸甜苦辣，这里主要说说源码分析方面的感受吧。">
+  <meta name="description" content="为了树莓派上的加密，折腾了差不多两个月—从清明节到端午节，终于到了快解决的时候了">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ROS入门总结">
-<meta property="og:url" content="http://www.justtodo.com/say/ros_code/index.html">
+<meta property="og:title" content="加密狗总结">
+<meta property="og:url" content="http://www.justtodo.com/coder/secret_dog_summary/index.html">
 <meta property="og:site_name" content="晓月刀的个人空间">
-<meta property="og:description" content="自从9月20号开始进入机器人领域，一路的摸爬滚打，一路的酸甜苦辣，这里主要说说源码分析方面的感受吧。">
+<meta property="og:description" content="为了树莓派上的加密，折腾了差不多两个月—从清明节到端午节，终于到了快解决的时候了">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2018-12-15T08:29:00.000Z">
+<meta property="article:published_time" content="2022-08-12T05:45:00.000Z">
 <meta property="article:modified_time" content="2022-08-13T06:59:58.494Z">
 <meta property="article:author" content="Denley Hsiao">
 <meta name="twitter:card" content="summary">
@@ -77,10 +77,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-say/ros_code" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-coder/secret_dog_summary" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/say/ros_code/" class="article-date">
-  <time class="dt-published" datetime="2018-12-15T08:29:00.000Z" itemprop="datePublished">2018-12-15</time>
+    <a href="/coder/secret_dog_summary/" class="article-date">
+  <time class="dt-published" datetime="2022-08-12T05:45:00.000Z" itemprop="datePublished">2022-08-12</time>
 </a>
     
   <div class="article-category">
@@ -95,7 +95,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      ROS入门总结
+      加密狗总结
     </h1>
   
 
@@ -103,37 +103,60 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>自从9月20号开始进入机器人领域，一路的摸爬滚打，一路的酸甜苦辣，这里主要说说源码分析方面的感受吧。</p>
+        <p>为了树莓派上的加密，折腾了差不多两个月—从清明节到端午节，终于到了快解决的时候了</p>
 <span id="more"></span>
 
-<h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><blockquote>
-<p>先让源码先跑起来</p>
-</blockquote>
-<p>真正开始源码分析，已经是11月后的事情了，因为之前源码还没拿到手，只有部署用的安装包，<br>在此期间，通过<font color="red">搭建运行环境，查看运行效果</font>，把源码当作黑盒来理解，对源码的功能会有不错的认识。</p>
-<h2 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h2><p>源码拿到手后，总是有种跃跃欲试的冲动，但从哪入手还是有点讲究的；<br>简单的看了下各个模块的说明，知道各自负责的功能后，我就<font color="red">从自己擅长的部分开始</font>—串口通讯，<br>其实选这个模块作为开始，还有一个原因就是有个相关问题需要解决 — 后面发现其实在此模块的上层进行更合理，<font color="red">带着问题去学习</font>比无头苍蝇要好</p>
-<h2 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h2><p>分析源码，尤其要带着问题去修改，难免就要对其进行现有结构进行重构，以利于理解与解决问题。<br>对我而言，进入陌生的机器人领域，拿着一堆杂乱的代码，或者说是与自己风格格格不入的代码，难怪圈内人总是会有自己重写的冲动；<br>但现在没办法，入门者只能先学习才能继续啊；<br>好在ROS自带单元测试模块，简单配置后，通过<font color="red">测试先行</font>的方法就可以放心的进行重构了。</p>
-<h2 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h2><p>啃完自己擅长或简单的模块，就到了啃硬骨头的时候了 — 系统的核心模块；</p>
+<h1 id="错误"><a href="#错误" class="headerlink" title="错误"></a>错误</h1><p><em>记录自己走过的弯路</em></p>
+<p>其实前面也有几次似乎看到了解决的曝光，比如可能是动态库引起，动态库的循环调用引起，烧无驱模式有问题，80文件有问题，LDK版本太低…，但却以失败告终，现在才发现，这些都只是可能，以为之类的猜想，包括由此而进行的漫无目的的测试，那时走过的弯路有哪些呢？</p>
+<ol>
+<li>在工控机上可以，树莓派上不行—就坚持认为加密狗有问题，最适合解决这问题的就是他们</li>
+<li>加密狗厂商的各种不配合，也为自己找到了理由，而没做到：好的提问能解决问题的一半；</li>
+<li>自己程序有点规模了，茫茫代码中自认为没时间，没把握找到问题所有，却不知道从最小化测试环境开始；</li>
+<li>当采用最小化测试环境时，也只是在原有代码中通过注释部分代码查找，每次得出的结论都没法定位问题，甚至与上一次的自相矛盾；</li>
+<li>整个测试流程没有自动化，很烦琐且费时间。</li>
+</ol>
+<p>简单的说就种解决问题的方法就是碰运气</p>
+<h1 id="摸索"><a href="#摸索" class="headerlink" title="摸索"></a>摸索</h1><p><em>记录自己做的好的地方</em></p>
+<p>为什么这次有真解决问题的感觉呢，那是因为建立在方法论的基础上：</p>
+<ol>
+<li>从最小验证开始：在树莓派上写一个hello, world；</li>
+<li>再写一个ROS的listener,再在此基础上迭代；</li>
+<li>测试流程自动化：如果这个测试过程会超过2次，就应该自动化（重构），它大大加快了我的测试进度</li>
+<li>在等待自动化测试的时候，让我有时间思考下一步应该做什么；</li>
+</ol>
+<h1 id="改进"><a href="#改进" class="headerlink" title="改进"></a>改进</h1><p><em>自己应该改进的地方</em></p>
 <ul>
-<li>同样，先从简单的重构开始：把800多行的main函数分割成N个小函数，此时还不要通过新建文件来分类，这个动作后续进行比较好，因为新建文件会涉及到功能划分、文件组织、编译设置等等，先<font color="red">专注于化整为零</font>吧；</li>
-<li>然后就可以新建文件<font color="red">存放工具类的函数</font>了，因为它常用，又信赖性比较小；</li>
-<li>最后就是<font color="red">按具体的功能新建文件</font>了，此时步伐要小，每个功能的依赖尽量控制到最小，依赖比较多的都留在主文件（main函数所在文件）中进行调用。</li>
+<li>一定要腾出时间来思考：代码面前了无秘密，代码中都是细节，细节是魔鬼</li>
+<li>没有主动去找原因：不为失败找理由，要为成功找方法</li>
+<li>自己思考不能乱，不能停</li>
+<li>思考为什么工控机上行,而树莓派上不行就可以大致排除<ol>
+<li>动态库引起</li>
+<li>动态库的循环调用引起</li>
+</ol>
+</li>
+<li>不要想着一步就所有问题都解决，先啃最难的：核心代码能加密就可以了，其它不能解决就算了—缩小目标；</li>
+<li>不要过度设计：自动化脚本能用就行，有过度设计的部分先记下来，完成手头工作后再总结；</li>
+<li>缩小范围验证有两种，但目标都是逼近对方以解决问题：有条件的话可以双向进行，看哪种方法可以更快逼近<ol>
+<li>现有代码部分注释做减法</li>
+<li>从hello world开始做加法</li>
+</ol>
+</li>
 </ul>
-<h2 id="第五步"><a href="#第五步" class="headerlink" title="第五步"></a>第五步</h2><p>这是目前我所在的状态，核心模块中大部分已经整理完成，但有几处核心算法无法理解；目前能想到的方法是：</p>
-<ul>
-<li><font color="red">建立调试环境</font>，逐步跟踪理解 — 我始终认为：理解自己写的代码可能单元测试就够了，但了解别人的思路，调试还是有它存在的价值；</li>
-<li>使用<font color="red">ROS_DEBUG输出调试用的日志</font>，而不是printf；</li>
-</ul>
-<p>以上，就是我进入机器人世界进行源码分析的过程，其中当然有些是无心插柳的原因：</p>
-<ul>
-<li>因为前期没有拿到源码，只能从运行开始；</li>
-<li>因为ROS自带单元测试，很容易就可以测试先行；</li>
-<li>因为涉及到串口通信，恰好可以从自己擅长的模块入手；</li>
-</ul>
+<h1 id="正解"><a href="#正解" class="headerlink" title="正解"></a>正解</h1><p>目前有效的方法，应该是最小规模上的小步迭代</p>
+<ol>
+<li>验证树莓派上hello world加密</li>
+<li>验证静态库、动态库和循环调用</li>
+<li>验证树莓派上ROS版的hello world加密</li>
+<li>验证ROS的订阅模式</li>
+<li>……</li>
+</ol>
+<p>可能现在说来这些步骤有点“事后诸葛亮”，但如果每次迭代都建立在好的提问上呢—我这一步能验证什么？我下一步要怎么做？<br>看来方法论有多重要啊</p>
+<p><em>以后还真要多反思，有没有更好的方法，能不能做的更好</em></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.justtodo.com/say/ros_code/" data-id="cl6rjtj0q000pi3oshda0a4mc" data-title="ROS入门总结" class="article-share-link">分享</a>
+      <a data-url="http://www.justtodo.com/coder/secret_dog_summary/" data-id="cl6rjtj0m000ii3osbcvg8h46" data-title="加密狗总结" class="article-share-link">分享</a>
       
       
       
@@ -143,19 +166,19 @@
     
 <nav id="article-nav">
   
-    <a href="/say/use_github_pages/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/coder/serial_port/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前一篇</strong>
       <div class="article-nav-title">
         
-          使用Github Pages建站
+          串口工具
         
       </div>
     </a>
   
   
-    <a href="/say/whose_cat/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/coder/install_rpi/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">后一篇</strong>
-      <div class="article-nav-title">谁是养猫人</div>
+      <div class="article-nav-title">树莓派系统安装</div>
     </a>
   
 </nav>

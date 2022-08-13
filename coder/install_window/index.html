@@ -4,16 +4,16 @@
   <meta charset="utf-8">
   
   
-  <title>ROS入门总结 | 晓月刀的个人空间</title>
+  <title>windows系统安装 | 晓月刀的个人空间</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="自从9月20号开始进入机器人领域，一路的摸爬滚打，一路的酸甜苦辣，这里主要说说源码分析方面的感受吧。">
+  <meta name="description" content="针对本人MAC下的虚拟机win7_64旗舰版">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ROS入门总结">
-<meta property="og:url" content="http://www.justtodo.com/say/ros_code/index.html">
+<meta property="og:title" content="windows系统安装">
+<meta property="og:url" content="http://www.justtodo.com/coder/install_window/index.html">
 <meta property="og:site_name" content="晓月刀的个人空间">
-<meta property="og:description" content="自从9月20号开始进入机器人领域，一路的摸爬滚打，一路的酸甜苦辣，这里主要说说源码分析方面的感受吧。">
+<meta property="og:description" content="针对本人MAC下的虚拟机win7_64旗舰版">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2018-12-15T08:29:00.000Z">
+<meta property="article:published_time" content="2022-04-29T08:49:08.000Z">
 <meta property="article:modified_time" content="2022-08-13T06:59:58.494Z">
 <meta property="article:author" content="Denley Hsiao">
 <meta name="twitter:card" content="summary">
@@ -77,14 +77,14 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-say/ros_code" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-coder/install_window" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/say/ros_code/" class="article-date">
-  <time class="dt-published" datetime="2018-12-15T08:29:00.000Z" itemprop="datePublished">2018-12-15</time>
+    <a href="/coder/install_window/" class="article-date">
+  <time class="dt-published" datetime="2022-04-29T08:49:08.000Z" itemprop="datePublished">2022-04-29</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/tech/">技术</a>
+    <a class="article-category-link" href="/categories/system/">系统</a>
   </div>
 
   </div>
@@ -95,7 +95,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      ROS入门总结
+      windows系统安装
     </h1>
   
 
@@ -103,37 +103,54 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>自从9月20号开始进入机器人领域，一路的摸爬滚打，一路的酸甜苦辣，这里主要说说源码分析方面的感受吧。</p>
+        <p>针对本人MAC下的虚拟机win7_64旗舰版</p>
 <span id="more"></span>
 
-<h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><blockquote>
-<p>先让源码先跑起来</p>
-</blockquote>
-<p>真正开始源码分析，已经是11月后的事情了，因为之前源码还没拿到手，只有部署用的安装包，<br>在此期间，通过<font color="red">搭建运行环境，查看运行效果</font>，把源码当作黑盒来理解，对源码的功能会有不错的认识。</p>
-<h2 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h2><p>源码拿到手后，总是有种跃跃欲试的冲动，但从哪入手还是有点讲究的；<br>简单的看了下各个模块的说明，知道各自负责的功能后，我就<font color="red">从自己擅长的部分开始</font>—串口通讯，<br>其实选这个模块作为开始，还有一个原因就是有个相关问题需要解决 — 后面发现其实在此模块的上层进行更合理，<font color="red">带着问题去学习</font>比无头苍蝇要好</p>
-<h2 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h2><p>分析源码，尤其要带着问题去修改，难免就要对其进行现有结构进行重构，以利于理解与解决问题。<br>对我而言，进入陌生的机器人领域，拿着一堆杂乱的代码，或者说是与自己风格格格不入的代码，难怪圈内人总是会有自己重写的冲动；<br>但现在没办法，入门者只能先学习才能继续啊；<br>好在ROS自带单元测试模块，简单配置后，通过<font color="red">测试先行</font>的方法就可以放心的进行重构了。</p>
-<h2 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h2><p>啃完自己擅长或简单的模块，就到了啃硬骨头的时候了 — 系统的核心模块；</p>
 <ul>
-<li>同样，先从简单的重构开始：把800多行的main函数分割成N个小函数，此时还不要通过新建文件来分类，这个动作后续进行比较好，因为新建文件会涉及到功能划分、文件组织、编译设置等等，先<font color="red">专注于化整为零</font>吧；</li>
-<li>然后就可以新建文件<font color="red">存放工具类的函数</font>了，因为它常用，又信赖性比较小；</li>
-<li>最后就是<font color="red">按具体的功能新建文件</font>了，此时步伐要小，每个功能的依赖尽量控制到最小，依赖比较多的都留在主文件（main函数所在文件）中进行调用。</li>
+<li>OS下载：<a target="_blank" rel="noopener" href="https://msdn.itellyou.cn/">个人</a>或者<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/software-download">微软下载中心</a></li>
+<li>使用<a target="_blank" rel="noopener" href="https://www.laomaotao.net/">老毛桃</a>制作windows启动盘</li>
+<li><a target="_blank" rel="noopener" href="http://www.drivergenius.com/">驱动精灵万能网卡版</a></li>
+<li>运行win7激活工具</li>
+<li>安装<a target="_blank" rel="noopener" href="https://www.vim.org/download.php#pc">VIM</a>，并配置好;</li>
+<li>安装mtux，并配置好；</li>
+<li>安装<a target="_blank" rel="noopener" href="https://git-scm.com/download/win">git</a>&#x2F;<a target="_blank" rel="noopener" href="https://tortoisegit.org/download/">git GUI</a>及汉化包，并配置好git;</li>
+<li>为便于<code>git clone git@github.com:xxx/yyy</code>时无需密码验证, 进行<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/9317a927e844">github下的ssh</a>配置</li>
 </ul>
-<h2 id="第五步"><a href="#第五步" class="headerlink" title="第五步"></a>第五步</h2><p>这是目前我所在的状态，核心模块中大部分已经整理完成，但有几处核心算法无法理解；目前能想到的方法是：</p>
+<h1 id="V1"><a href="#V1" class="headerlink" title="V1"></a>V1</h1><p>用于STC下的开发工作，建议安装最新v5版本</p>
 <ul>
-<li><font color="red">建立调试环境</font>，逐步跟踪理解 — 我始终认为：理解自己写的代码可能单元测试就够了，但了解别人的思路，调试还是有它存在的价值；</li>
-<li>使用<font color="red">ROS_DEBUG输出调试用的日志</font>，而不是printf；</li>
+<li><p>执行MDKxxx.exe安装IDE,缺省安装了ARM;</p>
+</li>
+<li><p>手动安装c51，期间出现的所有提示都选skip;</p>
+</li>
+<li><p>运行注册机</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 右键以管理员身份打开IDE的桌面快捷方式;</span><br><span class="line">2. 打开“File”的“License Management”，拷贝其CID编号;</span><br><span class="line">3. 打开注册机keygen，粘贴CID编号;</span><br><span class="line">4. target”选择arm，点击“Generate”，复制结果到“License Management”中，点“Add Lic”，激活ARM</span><br><span class="line">5. 同样操作激活C51.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装烧录工具(stc-isp-15xx-v6.86S)</p>
+</li>
 </ul>
-<p>以上，就是我进入机器人世界进行源码分析的过程，其中当然有些是无心插柳的原因：</p>
+<h1 id="V2"><a href="#V2" class="headerlink" title="V2"></a>V2</h1><p>SD卡备份与恢复：Win32DiskImager</p>
 <ul>
-<li>因为前期没有拿到源码，只能从运行开始；</li>
-<li>因为ROS自带单元测试，很容易就可以测试先行；</li>
-<li>因为涉及到串口通信，恰好可以从自己擅长的模块入手；</li>
+<li>恢复: 选择指定image文件后Write</li>
+<li>备份: 选择指定image文件后Read，但只能手动输入保存文件路径，如：C:\RaspberryPi.img</li>
+</ul>
+<h1 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h1><ul>
+<li>windows下的包管理工具：<a target="_blank" rel="noopener" href="https://sspai.com/post/52496">scoop</a>、<a target="_blank" rel="noopener" href="https://github.com/baulk/baulk">baulk</a></li>
+<li>everything</li>
+<li>autohotkey</li>
+<li>Total Commander</li>
+<li>sscom支持串口&#x2F;网口通信，注意串口通信时可选设置RTS&#x2F;DTR</li>
+<li>win10截图：snippingtool</li>
+<li>串口通信：serial_port_utility&#x2F;SerialDebug</li>
+<li>SD卡格式化：SDFormatter</li>
+</ul>
+<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><ul>
+<li>微软下载中心的”Oct 2018”版本有问题，应选”April 2018“</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.justtodo.com/say/ros_code/" data-id="cl6rjtj0q000pi3oshda0a4mc" data-title="ROS入门总结" class="article-share-link">分享</a>
+      <a data-url="http://www.justtodo.com/coder/install_window/" data-id="cl6rjtj0l000gi3osg1dyermo" data-title="windows系统安装" class="article-share-link">分享</a>
       
       
       
@@ -143,19 +160,19 @@
     
 <nav id="article-nav">
   
-    <a href="/say/use_github_pages/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/develop_recommend/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前一篇</strong>
       <div class="article-nav-title">
         
-          使用Github Pages建站
+          开发者推荐
         
       </div>
     </a>
   
   
-    <a href="/say/whose_cat/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/say/use_vim/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">后一篇</strong>
-      <div class="article-nav-title">谁是养猫人</div>
+      <div class="article-nav-title">vim入门</div>
     </a>
   
 </nav>

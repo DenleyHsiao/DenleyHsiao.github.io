@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>编程经验汇总 | 晓月刀的个人空间</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="个人多年编程经验汇总">
+<meta property="og:type" content="article">
+<meta property="og:title" content="编程经验汇总">
+<meta property="og:url" content="http://www.justtodo.com/coder/code_summary/index.html">
+<meta property="og:site_name" content="晓月刀的个人空间">
+<meta property="og:description" content="个人多年编程经验汇总">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-08-12T01:00:00.000Z">
+<meta property="article:modified_time" content="2022-08-13T06:59:58.494Z">
+<meta property="article:author" content="Denley Hsiao">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="晓月刀的个人空间" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">晓月刀的个人空间</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">多动手、勤思考</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.justtodo.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-coder/code_summary" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/coder/code_summary/" class="article-date">
+  <time class="dt-published" datetime="2022-08-12T01:00:00.000Z" itemprop="datePublished">2022-08-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/tech/">技术</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      编程经验汇总
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>个人多年编程经验汇总</p>
+<span id="more"></span>
+
+<ul>
+<li>不要把自己绑定在一门已经过时的技术上，如corba</li>
+<li>不要All in压注于一个新鲜领域，如小程序</li>
+<li>yml配置文件中”:”后面只能是一个空格而不是一个tab</li>
+<li>所有的编辑器初始都应设置tab为2个空格</li>
+<li>建议使用大家都认可的缺省值，而不是对个人或组织有特殊意义的: 如2000-01-01就好于2015-11-13作为日期的缺省值。</li>
+<li>使用源码安装时，建议使用稳定分支，不要使用最新的开发分支master</li>
+<li>如需Pull Request，建议新开分支再操作</li>
+<li>linux<ul>
+<li>不要将数据保存在&#x2F;tmp&#x2F;目录下，关机就会丢失</li>
+<li>建议使用.tar.gz格式的压缩包: <code>压缩命令是tar -zcvf xx.tar.gz .，对应解压命令是tar -zxvf xx.tar.gz，参数一定要对应，否则会解压失败</code></li>
+</ul>
+</li>
+<li>window<ul>
+<li>ini文件中的key名称不区分大小写</li>
+</ul>
+</li>
+<li>使用jupyter写教案<ul>
+<li>建议使用在线工具：github&#x2F;gitblit&#x2F;gist&#x2F;gitbook&#x2F;jupyter, 像李宏毅在《机器学习》lesson 4中使用的在线jupyter教案</li>
+</ul>
+</li>
+<li>Makefile<ul>
+<li>执行语句前不要有空格，最好以TAB代替空格</li>
+<li>变量使用方式是$(CC)，而不是$CC,%CC%等形式</li>
+</ul>
+</li>
+<li>cmake<ul>
+<li>建议使用CMake方式编译c++应用程序</li>
+<li>cmake使用option自定义配置时，缺省值不起作用：比如缺省为”ON”的表现其实是“OFF”, 因为在make之前没有执行ccmake ${project_dir}, 按c和上下键修改，按g键保存退出</li>
+</ul>
+</li>
+<li>在有CMakeLists.txt文件的项目中，不要使用clone时已有的Makefile文件，而要通过cmake重新生成</li>
+<li>CI<ul>
+<li>建议迭代使用持续集成</li>
+</ul>
+</li>
+<li>docker<ul>
+<li>建议使用docker而不是虚拟机生成一个开发环境&#x2F;运行环境</li>
+<li>建议通过官网提供的docker安装&#x2F;docker-compose安装方法，不要使用apt-get之类的安装方法：版本旧，还不容易安装成功</li>
+<li>建议docker run时增加-v和-p参数: 以后在使用docker attach container_id时可以共享文件与端口，如：docker run -it -v $(pwd):&#x2F;home&#x2F;denley&#x2F;work -p 3000:3000 denley&#x2F;dev:full</li>
+<li>建议dockerfile中所有的文件复制均使用 COPY 指令，仅在需要自动解压缩的场合使用 ADD, 如果 &lt;源路径&gt; 为一个 tar 压缩文件的话，压缩格式为 gzip, bzip2 以及 xz 的情况下，ADD 指令将会自动解压缩这个压缩文件到 &lt;目标路径&gt; 去</li>
+<li>建议使用docker build而不是docker commit新建一个镜像</li>
+<li>Dockerfile中的指令必须是大写字母</li>
+<li>Dockerfile指令不要过早优化，以便充分利用缓存加速build，验证成功后可交由automated。</li>
+<li>多使用docker-compose</li>
+</ul>
+</li>
+<li>db<ul>
+<li>建议db中使用缺省值代替null值以解决Nulls first&#x2F;last排序问题, 对有null值的字段进行排序时，不同的数据库有不同的处理方式，查询结果在排序方面极不可控</li>
+</ul>
+</li>
+<li>环境变量<ul>
+<li>建议环境变量全部大写</li>
+<li>建议纳入版本控制系统的涉密信息采用环境变量的方式设置, 如：Rails中的&lt;%&#x3D; ENV.fetch(“SITE_DATABASE_PASSWORD”) { “123456”} %&gt;，可能其它语言不一定支持</li>
+</ul>
+</li>
+<li>git<ul>
+<li>使用github保存code</li>
+<li>使用gist保存code片段</li>
+<li>使用gitbook写书<ul>
+<li>gitbook中SUMMARY.md不能使用带’-‘的文件名，如chiron-2.md应改为chiron_2.md</li>
+<li>gitbook设置域名解析时CNAME指向：<a target="_blank" rel="noopener" href="http://www.gitbooks.io/hosting.gitbook.com%EF%BC%8C%E5%B9%B6%E8%A6%81%E7%82%B9%E5%90%AF%E7%94%A8%E5%90%8E%E7%AD%8910%E5%88%86%E9%92%9F%E6%89%8D%E4%BC%9A%E7%94%9F%E6%95%88%EF%BC%8C%E5%A6%82%E8%BF%98%E6%9C%89%E9%97%AE%E9%A2%98%EF%BC%8C%E6%B8%85%E7%A9%BA%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98">www.gitbooks.io/hosting.gitbook.com，并要点启用后等10分钟才会生效，如还有问题，清空浏览器缓存</a></li>
+</ul>
+</li>
+<li>不要使用git保存不是很了解内部结构的文件夹，如数据库、git仓库之类 因为其客户端可能对空目录敏感：即使有.gitignore&#x2F;.gitkeep之类的隐藏文件，如postgres数据库有些空目录不存在时就无法启动，而git对空目录是不纳入版本控制的，可通过压缩整个文件夹后再纳入版本控制</li>
+</ul>
+</li>
+<li>web<ul>
+<li>路由时图片后缀区别大小写，整个路由路径呢？如：<a target="_blank" rel="noopener" href="http://domain.name/images/PCLint-Directory.JPG%E4%B8%8Ehttp://domain.name/images/PCLint-Directory.jpg%E4%B8%8D%E6%98%AF%E5%90%8C%E4%B8%80%E6%96%87%E4%BB%B6">http://domain.name/images/PCLint-Directory.JPG与http://domain.name/images/PCLint-Directory.jpg不是同一文件</a></li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.justtodo.com/coder/code_summary/" data-id="cl6rjtj090003i3osbgux33hw" data-title="编程经验汇总" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/coder/install_mac/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          MAC系统安装
+        
+      </div>
+    </a>
+  
+  
+    <a href="/coder/install_aliyun/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">阿里云系统安装</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/tech/">技术</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/misc/">杂项</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/live/">生活</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/system/">系统</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/English/">英语</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/coder/gittext/">gettext的使用</a>
+          </li>
+        
+          <li>
+            <a href="/coder/git_summary/">Git汇总</a>
+          </li>
+        
+          <li>
+            <a href="/coder/serial_port/">串口工具</a>
+          </li>
+        
+          <li>
+            <a href="/coder/secret_dog_summary/">加密狗总结</a>
+          </li>
+        
+          <li>
+            <a href="/coder/install_rpi/">树莓派系统安装</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 Denley Hsiao<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
