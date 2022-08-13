@@ -151,7 +151,7 @@ brew link docker docker-compose --overwrite
 
 以下软件可以通过brew安装
 * [MicrosoftRemoteDesktop](https://blog.csdn.net/ytangdigl/article/details/78941783): 远程桌面登录到windows
-* shuttle: 简易SSH快捷菜单
+* [shuttle](https://github.com/fitztrev/shuttle/releases): 简易SSH快捷菜单
 
 * MAC下网口转USB： [确定网卡芯片型号](https://sspai.com/post/41120?_t=1576887829), 然后通过型号找到绿联mac驱动[Type-C千兆网卡AX88179芯片下载 ](https://www.lulian.cn/download/6-cn.html)
 * 比Eclipse容易上手的Java IDE **IntelliJ-IDEA**：[下载](https://www.jetbrains.com/idea/download/)/[激活](http://idea.javatiku.cn/)
