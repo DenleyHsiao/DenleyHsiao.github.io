@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>使用Github Pages建站 | 晓月刀的个人空间</title>
+  <title>vim入门 | 晓月刀的个人空间</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="有人说：把自己当成一个公司去经营，如何展示公司的产品呢？有人说：持续输出倒逼输入  在github上新建&lt;user_name&gt;.github.io项目: public权限&#x2F;.gitignore选择node; aliyun域名解析中增加一条CNAME指向&lt;user_name&gt;.github.io; 设置项目&lt;user_name&gt;.github.io为，g">
+  <meta name="description" content="安装brew install macvim 安装中文帮助 入门: 简明 VIM 练级攻略&#x2F;vim入门教程 练习: 命令行下输入vimtutor 高级一点的：Learn vim W3Cschool的: vim 教程 Vim 从入门到精通  注  打印“VIM键盘图”是方便入门后查找，不适合于入门;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用Github Pages建站">
-<meta property="og:url" content="http://www.justtodo.com/say/use_github_pages/index.html">
+<meta property="og:title" content="vim入门">
+<meta property="og:url" content="http://www.justtodo.com/coder/use_vim/index.html">
 <meta property="og:site_name" content="晓月刀的个人空间">
-<meta property="og:description" content="有人说：把自己当成一个公司去经营，如何展示公司的产品呢？有人说：持续输出倒逼输入  在github上新建&lt;user_name&gt;.github.io项目: public权限&#x2F;.gitignore选择node; aliyun域名解析中增加一条CNAME指向&lt;user_name&gt;.github.io; 设置项目&lt;user_name&gt;.github.io为，g">
+<meta property="og:description" content="安装brew install macvim 安装中文帮助 入门: 简明 VIM 练级攻略&#x2F;vim入门教程 练习: 命令行下输入vimtutor 高级一点的：Learn vim W3Cschool的: vim 教程 Vim 从入门到精通  注  打印“VIM键盘图”是方便入门后查找，不适合于入门;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-03-24T06:51:20.000Z">
-<meta property="article:modified_time" content="2022-08-13T06:59:58.494Z">
+<meta property="article:published_time" content="2022-03-25T14:31:30.000Z">
+<meta property="article:modified_time" content="2022-08-13T07:53:29.303Z">
 <meta property="article:author" content="Denley Hsiao">
 <meta name="twitter:card" content="summary">
   
@@ -77,10 +77,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-say/use_github_pages" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-coder/use_vim" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/say/use_github_pages/" class="article-date">
-  <time class="dt-published" datetime="2022-03-24T06:51:20.000Z" itemprop="datePublished">2022-03-24</time>
+    <a href="/coder/use_vim/" class="article-date">
+  <time class="dt-published" datetime="2022-03-25T14:31:30.000Z" itemprop="datePublished">2022-03-25</time>
 </a>
     
   <div class="article-category">
@@ -95,7 +95,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      使用Github Pages建站
+      vim入门
     </h1>
   
 
@@ -103,26 +103,24 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>有人说：把自己当成一个公司去经营，如何展示公司的产品呢？<br>有人说：持续输出倒逼输入</p>
-<ol>
-<li>在github上新建<code>&lt;user_name&gt;.github.io</code>项目: public权限&#x2F;.gitignore选择node;</li>
-<li>aliyun域名解析中增加一条CNAME指向<code>&lt;user_name&gt;.github.io</code>;</li>
-<li>设置项目<code>&lt;user_name&gt;.github.io</code>为，github page使用gh-pages分支，CNAME指向上一步中设置的域名;</li>
-<li>构建<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:&lt;user_name&gt;/&lt;user_name&gt;.github.io</span><br><span class="line"><span class="built_in">cd</span> &lt;user_name&gt;.github.io</span><br><span class="line">hexo init &lt;web_name&gt;</span><br><span class="line"><span class="built_in">cd</span> &lt;web_name&gt;</span><br><span class="line">vi &lt;web_name&gt;/source/_posts/welcome_to_my_web.md</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure></li>
-<li>部署：提交后的代码会在action下自动更新到gh-pages分支</li>
-<li>测试：在浏览器中输入域名</li>
+        <ol>
+<li>安装<code>brew install macvim</code></li>
+<li>安装<a target="_blank" rel="noopener" href="https://jsntn.com/software/2012/05/27/gvim.html">中文帮助</a></li>
+<li>入门: <a target="_blank" rel="noopener" href="https://coolshell.cn/articles/5426.html">简明 VIM 练级攻略</a>&#x2F;<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=L8aOnqxMPis">vim入门教程</a></li>
+<li>练习: 命令行下输入vimtutor</li>
+<li>高级一点的：<a target="_blank" rel="noopener" href="https://github.com/wsdjeg/Learn-Vim_zh_cn">Learn vim</a></li>
+<li>W3Cschool的: <a target="_blank" rel="noopener" href="https://www.w3cschool.cn/vim/8y7cnozt.html">vim 教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/wsdjeg/vim-galore-zh_cn">Vim 从入门到精通</a></li>
 </ol>
 <p><em>注</em></p>
 <ul>
-<li>域名解析后需要些时间访问才能生效;</li>
-<li>提交到github后也需要些时间才能生效：自动执行action需要时间;</li>
-<li>作为page的github项目必须是public.</li>
+<li>打印“VIM键盘图”是方便入门后查找，不适合于入门;</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.justtodo.com/say/use_github_pages/" data-id="cl6rjtj0r000ri3os09svdzld" data-title="使用Github Pages建站" class="article-share-link">分享</a>
+      <a data-url="http://www.justtodo.com/coder/use_vim/" data-id="cl6rlq64p000nefosehf36ghr" data-title="vim入门" class="article-share-link">分享</a>
       
       
       
@@ -132,19 +130,19 @@
     
 <nav id="article-nav">
   
-    <a href="/say/use_vim/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/coder/install_window/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前一篇</strong>
       <div class="article-nav-title">
         
-          vim入门
+          windows系统安装
         
       </div>
     </a>
   
   
-    <a href="/say/ros_code/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/coder/use_github_pages/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">后一篇</strong>
-      <div class="article-nav-title">ROS入门总结</div>
+      <div class="article-nav-title">使用Github Pages建站</div>
     </a>
   
 </nav>
