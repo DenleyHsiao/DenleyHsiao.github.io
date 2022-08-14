@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>ROS入门总结 | 晓月刀的个人空间</title>
+  <title>机器人源码分析 | 晓月刀的个人空间</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="自从9月20号开始进入机器人领域，一路的摸爬滚打，一路的酸甜苦辣，这里主要说说源码分析方面的感受吧。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ROS入门总结">
+<meta property="og:title" content="机器人源码分析">
 <meta property="og:url" content="http://www.justtodo.com/say/ros_code/index.html">
 <meta property="og:site_name" content="晓月刀的个人空间">
 <meta property="og:description" content="自从9月20号开始进入机器人领域，一路的摸爬滚打，一路的酸甜苦辣，这里主要说说源码分析方面的感受吧。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-12-15T08:29:00.000Z">
-<meta property="article:modified_time" content="2022-08-14T02:05:49.419Z">
+<meta property="article:modified_time" content="2022-08-14T07:34:53.020Z">
 <meta property="article:author" content="Denley Hsiao">
 <meta name="twitter:card" content="summary">
   
@@ -95,7 +95,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      ROS入门总结
+      机器人源码分析
     </h1>
   
 
@@ -106,9 +106,7 @@
         <p>自从9月20号开始进入机器人领域，一路的摸爬滚打，一路的酸甜苦辣，这里主要说说源码分析方面的感受吧。</p>
 <span id="more"></span>
 
-<h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><blockquote>
-<p>先让源码先跑起来</p>
-</blockquote>
+<h2 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h2><p><em>先让源码先跑起来</em></p>
 <p>真正开始源码分析，已经是11月后的事情了，因为之前源码还没拿到手，只有部署用的安装包，<br>在此期间，通过<font color="red">搭建运行环境，查看运行效果</font>，把源码当作黑盒来理解，对源码的功能会有不错的认识。</p>
 <h2 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h2><p>源码拿到手后，总是有种跃跃欲试的冲动，但从哪入手还是有点讲究的；<br>简单的看了下各个模块的说明，知道各自负责的功能后，我就<font color="red">从自己擅长的部分开始</font>—串口通讯，<br>其实选这个模块作为开始，还有一个原因就是有个相关问题需要解决 — 后面发现其实在此模块的上层进行更合理，<font color="red">带着问题去学习</font>比无头苍蝇要好</p>
 <h2 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h2><p>分析源码，尤其要带着问题去修改，难免就要对其进行现有结构进行重构，以利于理解与解决问题。<br>对我而言，进入陌生的机器人领域，拿着一堆杂乱的代码，或者说是与自己风格格格不入的代码，难怪圈内人总是会有自己重写的冲动；<br>但现在没办法，入门者只能先学习才能继续啊；<br>好在ROS自带单元测试模块，简单配置后，通过<font color="red">测试先行</font>的方法就可以放心的进行重构了。</p>
@@ -133,7 +131,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.justtodo.com/say/ros_code/" data-id="cl6soqxkk000sgzorck6jb1nx" data-title="ROS入门总结" class="article-share-link">分享</a>
+      <a data-url="http://www.justtodo.com/say/ros_code/" data-id="cl6t0i57z000sf0oyfo895lku" data-title="机器人源码分析" class="article-share-link">分享</a>
       
       
       
