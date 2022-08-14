@@ -3,7 +3,7 @@ layout: post
 title:  谁是养猫人
 date:   2018-08-10 11:18
 categories:
-  - 生活
+  - 晓月刀说
 ---
 
 杂乱的已知条件中，也是有规律可寻的

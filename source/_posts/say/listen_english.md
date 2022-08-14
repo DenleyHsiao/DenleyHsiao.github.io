@@ -3,7 +3,7 @@ layout: post
 title: 学习英语，该从哪开始呢？
 date: 2022-08-07 15:21
 categories:
-  - 英语
+  - 晓月刀说
 ---
 
 ![英语听力](/assets/images/say/listen_english.jpeg)

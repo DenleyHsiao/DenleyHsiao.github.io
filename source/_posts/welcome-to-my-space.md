@@ -3,7 +3,6 @@ layout: post
 title:  欢迎
 date:   2015-11-17 12:00:05
 categories:
-  - 杂项
 ---
 
 欢迎您来到晓月刀的个人空间
