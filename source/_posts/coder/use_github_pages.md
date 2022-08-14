@@ -8,6 +8,7 @@ categories:
 
 有人说：把自己当成一个公司去经营，如何展示公司的产品呢？
 有人说：持续输出倒逼输入
+<!-- More -->
 
 1. 在github上新建`<user_name>.github.io`项目: public权限/.gitignore选择node;
 2. aliyun域名解析中增加一条CNAME指向`<user_name>.github.io`;
