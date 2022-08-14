@@ -3,7 +3,7 @@ layout: post
 title: Git汇总
 date: 2022-08-12 14:17
 categories:
-  - 技术
+  - 工具
 ---
 
 git相关问题汇总
