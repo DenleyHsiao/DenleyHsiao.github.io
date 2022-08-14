@@ -43,9 +43,7 @@ SD卡备份与恢复：Win32DiskImager
 * everything
 * autohotkey
 * Total Commander
-* sscom支持串口/网口通信，注意串口通信时可选设置RTS/DTR
 * win10截图：snippingtool
-* 串口通信：serial_port_utility/SerialDebug
 * SD卡格式化：SDFormatter
 
 # 注意

@@ -10,6 +10,9 @@ categories:
 <!-- More -->
 
 * 要打开的串口在打开之前需先加上权限，如： `sudo chmod 777 /dev/ttyS1`
+*
+* 串口通信：
+* Window下的：serial_port_utility/SerialDebug和[sscom 串口助手](https://tech.wmzhe.com/article/10085.html)sscom支持串口/网口通信，注意串口通信时可选设置RTS/DTR
 * MAC下的：[coolterm](https://blog.csdn.net/bht890811/article/details/74151180): 串口调试助手/[minicom](https://blog.csdn.net/u010285246/article/details/72354038): 串口调试工具
 
 # cutecom
